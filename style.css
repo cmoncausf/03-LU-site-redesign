@@ -1,33 +1,408 @@
 /* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  color: royalblue;
-  text-align: center;
-  background-color: bisque;
-  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  color: #333;
+  background-color: #fefcf8;
+  font-family: "Quicksand", sans-serif;
+  line-height: 1.6;
 }
 
 /* Typography */
+h1,
+h2,
+h3 {
+  font-family: "Playfair", serif;
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+h1 {
+  font-size: 58px;
+  margin: 0;
+}
+
+h2 {
+  font-size: 38px;
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+h3 {
+  font-size: 24px;
+  margin: 12px 0;
+}
+
+p {
+  margin-bottom: 16px;
+}
 
 /* Links & Accents */
+a {
+  color: #4a6741;
+}
 
+a:hover {
+  text-decoration: none;
+}
+
+.accent {
+  color: #ba404f;
+}
 /* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 
+/* Ensure images fit inside specials cards */
+.special-offer img {
+  width: 100%;
+  max-height: 260px;
+  object-fit: contain;
+  border-radius: 0;
+  margin-bottom: 16px;
+}
+
+.header-content,
+.footer-content,
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header,
+footer {
+  text-align: center;
+  padding: 32px 16px;
+}
+
+header {
+  padding-top: 40px;
+}
+
+.tagline {
+  color: #5a5a5a;
+  letter-spacing: 1px;
+}
 /* Hero Section */
+#hero-container {
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+.hero-img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  border: 1px solid #ddd5d0;
+  border-radius: 4px;
+  padding: 8px;
+}
 
 /* Main Content */
 
+main {
+  padding: 0 16px;
+  max-width: 800px;
+}
+
+section {
+  margin: 0 auto;
+  padding: 60px 0;
+}
+
 /* About Section */
+.about-us {
+  border-bottom: 1px solid #f2eae5;
+  padding-bottom: 60px;
+}
 
 /* Specials Section */
 
-/* Visit Us Section */
+.specials {
+  max-width: 1150px;
+  padding: 60px 0;
+}
 
+.specials-list {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  align-items: flex-start;
+}
+
+.special-offer {
+  flex: 0 0 300px;
+  width: 300px;
+  height: 300px;
+  max-width: 300px;
+  max-height: 300px;
+  background-color: white;
+  border-radius: 8px;
+  padding: 24px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.special-offer p {
+  margin-top: 6px;
+  margin-bottom: 0;
+}
+.special-offer img {
+  height: 140px;
+  width: auto;
+  max-width: 90%;
+  border: 1px solid #e4deda;
+  border-radius: 4px;
+  padding: 8px;
+  margin-bottom: 16px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Visit Us Section */
+.visit-us {
+  border-top: 1px solid #f2eae5;
+  max-width: 800px;
+}
 iframe {
   width: 100%;
   height: 350px;
 }
 
 /* Footer */
+
 footer {
   margin-top: 48px;
+}
+
+.footer-nav {
+  margin-bottom: 18px;
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+}
+
+.footer-nav a {
+  color: #4a6741;
+  font-weight: 600;
+  text-decoration: none;
+  font-family: "Quicksand", sans-serif;
+  transition: color 0.2s;
+}
+
+.footer-nav a:hover {
+  color: #ba404f;
+  text-decoration: underline;
+}
+
+.footer-social {
+  margin-bottom: 18px;
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+}
+
+.social-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  transition: transform 0.2s, filter 0.2s;
+  filter: grayscale(30%) brightness(0.9);
+}
+
+.footer-social a:hover .social-icon {
+  transform: scale(1.1);
+  filter: none;
+}
+
+/* Skip Link */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: 100;
+}
+.skip-link:focus {
+  left: 16px;
+  top: 16px;
+  width: auto;
+  height: auto;
+  padding: 8px 16px;
+  background: #fff;
+  color: #ba404f;
+  border: 2px solid #ba404f;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+/* Testimonials Section */
+.testimonials {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 48px 0;
+}
+
+.testimonials-list {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.testimonial {
+  background: #fff8f9;
+  border-left: 6px solid #ba404f;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(186, 64, 79, 0.08);
+  padding: 24px 20px 16px 28px;
+  max-width: 340px;
+  font-style: italic;
+  color: #4a6741;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.testimonial footer {
+  margin-top: 18px;
+  font-size: 1em;
+  color: #ba404f;
+  font-style: normal;
+  text-align: right;
+}
+
+/* About Fran Section */
+.about-fran {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 60px 16px;
+  text-align: center;
+}
+
+.about-fran-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-fran-img {
+  flex: 1 1 300px;
+  max-width: 300px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about-fran-text {
+  flex: 2 1 500px;
+  text-align: left;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #4a6741;
+}
+
+.about-fran-text p {
+  margin-bottom: 16px;
+}
+
+/* Seasonal Bouquet Section */
+.seasonal-bouquet {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 60px 16px;
+  text-align: center;
+}
+
+.seasonal-bouquet-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  align-items: center;
+  justify-content: center;
+}
+
+.seasonal-bouquet-img {
+  flex: 1 1 300px;
+  max-width: 300px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.seasonal-bouquet-text {
+  flex: 2 1 500px;
+  text-align: left;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #4a6741;
+}
+
+.seasonal-bouquet-text p {
+  margin-bottom: 16px;
+}
+
+.seasonal-bouquet-text .price-now {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ba404f;
+}
+
+/* Top Navigation Styles */
+.top-nav {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  padding: 16px 0;
+  background-color: #fefcf8;
+  border-bottom: 1px solid #e4deda;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-icon {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.2s, filter 0.2s;
+  filter: grayscale(30%) brightness(0.9);
+}
+
+.nav-icon:hover {
+  transform: scale(1.1);
+  filter: none;
+}
+
+.nav-button {
+  padding: 10px 16px;
+  font-family: "Quicksand", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #4a6741;
+  background-color: #fff;
+  border: 2px solid #4a6741;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.nav-button:hover {
+  background-color: #4a6741;
+  color: #fff;
 }
